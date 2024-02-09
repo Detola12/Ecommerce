@@ -1,0 +1,108 @@
+
+
+.login-container {
+    padding: 40px;
+    box-shadow: 5px 5px 10px #c0c0c0;
+}
+
+.form-contain {
+    margin-bottom: 20px;
+}
+
+.form-contain>label {
+    padding-bottom: 10px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.form-contain>input {
+    outline: none !important;
+    background: white;
+    border-bottom: 1px solid #c0c0c0;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+.form-contain>input {
+    background-color: white;
+    padding-left: 0px !important;
+}
+
+.button-bx button {
+    margin-top: 5px;
+    background-color: #ff5151;
+    color: #fff;
+    border: none;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1;
+    padding: 13px 30px 13px;
+    text-transform: uppercase;
+    transition: all 0.6s ease 0s;
+}
+
+.button-bx button:hover {
+    background-color: #010225;
+}
+
+.user-menu {
+    display: none;
+    position: absolute;
+    background-color: white;
+    padding: 0px 20px;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    margin-top: 10px;
+}
+
+.user-menu li {
+    font-size: 15px;
+}
+
+.user-menu li:hover {
+    color: #ff5151;
+}
+
+.star-rating {
+    display: inline-block;
+    font-size: 0;
+    position: relative;
+    color: #ddd;
+}
+
+.star-rating input[type="radio"] {
+    display: none;
+}
+
+.star-rating label {
+    display: inline-block;
+    position: relative;
+    z-index: 10;
+    cursor: pointer;
+    width: 1em;
+    font-size: 2em;
+    color: #000;
+    text-shadow: 1px 1px #999;
+}
+
+.star-rating label::before {
+    content: '\2605';
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    font-size: 2em;
+    color: #ddd;
+}
+
+.star-rating input[type="radio"]:checked~label,
+.star-rating input[type="radio"]:hover~label {
+    color: #ffca08;
+    text-shadow: 1px 1px #666;
+}
+
+.star-rating label:hover~label::before {
+    color: #ddd;
+}
