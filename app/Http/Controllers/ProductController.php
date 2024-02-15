@@ -102,7 +102,12 @@ class ProductController extends Controller
 
 
         if($request->file('photo')){
+
             $file = $request->file('photo');
+            if ($file->getError()){
+                return redirect()->back()->with('image','File is too large >2mb');
+            }
+//            dd(str_replace(' ','',$file));
             $ext = $file->extension();
             $filename = time().$slug.'.'.$ext;
             $bigimagepath = 'uploads/products/big';
@@ -123,6 +128,17 @@ class ProductController extends Controller
                 'price' => $price,
                 'slug' => $slug,
                 'image' => $filename,
+                'description' => $description
+            ]);
+            $product->save();
+        }
+        else{
+            $product = new Product([
+                'name' => $name,
+                'category_id' => $category_id,
+                'price' => $price,
+                'slug' => $slug,
+                'image' => '',
                 'description' => $description
             ]);
             $product->save();

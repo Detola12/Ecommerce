@@ -57,7 +57,8 @@ class AppController extends Controller
                 Order::create([
                     'product_id' => $id,
                     'user_id' => Auth::id(),
-                    'quantity' => $items['quantity']
+                    'quantity' => $items['quantity'],
+                    'cost' => $items['price']
                 ]);
             }
 

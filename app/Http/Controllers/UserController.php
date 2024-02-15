@@ -45,7 +45,6 @@ class UserController extends Controller
             return back();
         }
 
-        dd($request->firstname);
 
             if (Hash::check($request->old, Auth::user()->password)){
                 \App\Models\User::update([

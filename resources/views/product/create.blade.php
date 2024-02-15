@@ -32,6 +32,13 @@
                             </div>
                         </div>
                         @endif
+                        @if(session('image'))
+                        <div class="alert">
+                            <div class="d-flex justify-content-center fs-4 alert alert-danger ">
+                                {{session('image')}}
+                            </div>
+                        </div>
+                        @endif
 
                         <div id="lg2" class="tab-pane">
                             <div class="login-container">

@@ -151,13 +151,13 @@ class FilteringController extends Controller
 
 
 
-    public function used($id){
+    public function used($id = 1){
         $user = User::find($id);
         if (Rating::where('user_id',$id)->exists()){
 
             $recommendations = $this->getRecommendations($user, 1);
             if($recommendations){
-
+                dd('Hello');
             }
             else{
                 $recommendations = Product::orderBy('rating','desc')->take(8);
